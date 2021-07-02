@@ -1,12 +1,13 @@
-//something
 import './styles/index.scss'
+import App from './App'
 
-function App(): HTMLDivElement {
+function index(): HTMLDivElement {
   const element = document.createElement('div')
+  element.className = 'root'
 
-  element.innerHTML = 'Test success!'
+  element.appendChild(App())
 
   return element
 }
 
-document.body.appendChild(App())
+document.body.appendChild(index())
